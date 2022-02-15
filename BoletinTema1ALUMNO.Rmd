@@ -237,6 +237,10 @@ any(is.na(Chile))
 # Determina el número de valores perdidos para cada una de las variables del conjunto **cabbages**
 colSums(sapply(Chile, is.na))
 
+# Utilizamos la función summary, sobre cabbages y Chile
+
+summary(cabbages)
+summary(Chile)
 
 
 ```
