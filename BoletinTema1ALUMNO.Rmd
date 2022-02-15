@@ -220,23 +220,22 @@ str(cabbages)
 # determinar el número de valores perdidos 
 any(is.na(cabbages))
 
-# Determina el número de valores perdidos para cada una de las variables del conjunto **cabbages**
+# Determina el número de valores perdidos para cada una de las variables del conjunto cabbages
 colSums(sapply(cabbages, is.na))
 
 
+# Repite los apartados anteriores con el conjunto de datos Chile del paquete car
 
+dim(Chile)
+head(Chile)
+tail(Chile)
+str(Chile)
 
+# determinar el número de valores perdidos 
+any(is.na(Chile))
 
-
-
-
-
-
-
-
-
-
-
+# Determina el número de valores perdidos para cada una de las variables del conjunto **cabbages**
+colSums(sapply(Chile, is.na))
 
 
 
