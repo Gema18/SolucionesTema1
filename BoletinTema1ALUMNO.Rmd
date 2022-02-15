@@ -162,7 +162,8 @@ e.  Determina las diferencia entre los animales que no aparecen en ambos conjunt
 
 ```{r}
 
-
+# vemos que hay alguna letra diferente a la hora de escribirlos
+# Arctic fox <-> Artic fox
 
 
 
