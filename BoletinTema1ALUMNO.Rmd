@@ -109,14 +109,28 @@ help(package = robustbase, topic = Animals2)
 class(mammals)
 class(Animals2)
 
+# usamos las funciones dim, head, tail y str para una primera visión de los conjuntos de datos
 dim(mammals)
-dim(Animals2)
-
 head(mammals)
-head(Animals2)
-
 tail(mammals)
+str(mammals)
+
+dim(Animals2)
+head(Animals2)
 tail(Animals2)
+str(Animals2)
+
+# Mostramos los nombres de las filas y las columnas
+# nombres de las filas
+rownames(mammals)
+# nombres de las columnas
+colnames(mammals)
+
+# nombres de las filas
+rownames(Animals2)
+# nombres de las columnas
+colnames(Animals2)
+
 ```
 
 d.  Usa la función **intersect** y almacena en la variable *commonAnimals* los aminales que aparezcan en ambos conjuntos
