@@ -249,8 +249,9 @@ summary(Chile)
 
 ```{r}
 
+qqPlot(cabbages$HeadWt)
 
-
+qqPlot(cabbages$VitC)
 
 
 ```
