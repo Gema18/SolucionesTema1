@@ -7,19 +7,19 @@ params:
   lang: ES
 lang: "`r switch(params$lang, ES = 'es-ES', EN = 'en-US')`"
 output:
-  pdf_document:
-    toc: no
-    toc_depth: 3
-    number_sections: yes
-  html_notebook:
-    echo: yes
-    number_sections: yes
-    toc: yes
   html_document:
     echo: yes
     number_sections: yes
     theme: lumen
     toc: yes
+  html_notebook:
+    echo: yes
+    number_sections: yes
+    toc: yes
+  pdf_document:
+    toc: no
+    toc_depth: 3
+    number_sections: yes
 language:
   label:
     fig: 'Figura '
@@ -86,29 +86,37 @@ package.check <- lapply(packages, FUN = function(x) {
 1.  Considera los conjuntos de datos **mammals** del paquete **MASS** y **Animals2** del paquete **robustbase**.
 
 <!-- -->
+```{r}
+library(MASS)
+# Vemos los conjuntos presentes en la libreria MASS
+data(package = "MASS")
+
+library(robustbase)
+# Vemos los conjuntos presentes en la libreria robustbase
+data(package = "robustbase")
+```
+
 
 a.  Mira la las características de ambos conjuntos usando la ayuda.
 b.  Usa las funciones **dim, head, tail, str** para una primera visión de los conjuntos de datos.
 c.  Muestra los nombres de las filas y las columnas (**rownames**, **colnames**)
 
 ```{r}
+# miramos la información de un conjunto de datos con help
+help(package = MASS,topic = mammals)
+help(package = robustbase, topic = Animals2)
 
+class(mammals)
+class(Animals2)
 
+dim(mammals)
+dim(Animals2)
 
+head(mammals)
+head(Animals2)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+tail(mammals)
+tail(Animals2)
 ```
 
 d.  Usa la función **intersect** y almacena en la variable *commonAnimals* los aminales que aparezcan en ambos conjuntos
