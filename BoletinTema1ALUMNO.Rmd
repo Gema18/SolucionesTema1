@@ -210,15 +210,18 @@ length(installed.packages())
     d.  Utiliza la función **summary**, sobre **cabbages** y **Chile** y observa como, además de otros estadísticos, también devuelve el número de valores perdidos de cada variable.
 
 ```{r}
+help(package = MASS,topic = cabbages)
 
+dim(cabbages)
+head(cabbages)
+tail(cabbages)
+str(cabbages)
 
+# determinar el número de valores perdidos 
+any(is.na(cabbages))
 
-
-
-
-
-
-
+# Determina el número de valores perdidos para cada una de las variables del conjunto **cabbages**
+colSums(sapply(cabbages, is.na))
 
 
 
