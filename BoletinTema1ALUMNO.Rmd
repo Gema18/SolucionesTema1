@@ -329,7 +329,6 @@ plot(cabbages$HeadWt, cabbages$VitC)
 #Diagrama de dispersión etiquetando según un factor.
 plot(cabbages$HeadWt, cabbages$VitC, pch=c(6,16)[cabbages$Cult])
 legend(x="topright",legend=c("Cult = c39","Cult = c52"), pch=c(6,16))
-# Planteamos el modelo lineal sin tener en cuenta los factores
 Model = lm(formula = VitC ~ HeadWt, data = cabbages)
 # Planteamos 2 modelos lineales, uno para los datos de cada factor
 Model1 <- lm(VitC ~ HeadWt, data = cabbages, subset = which(Cult == "c39"))
