@@ -259,8 +259,29 @@ qqPlot(cabbages$VitC)
 6.  Una representación habitual, para determinar la distribución de los datos de una variable cuantitativa es el histograma (**hist**). Determina, de forma aproximada, utilizando el histograma, si hay diferencias entre los contenidos de vitamina C (**VitC**), para las diferentes variedades de calabaza (variable **Cult**), en el conjunto de datos **cabbages**.
 
 ```{r}
+# Miramos las diferentes variedades de calabaza
+levels(cabbages$Cult)
+# Vemos que hay 2 variedades, la variedad c39 y la variedad c52.
 
+# Hacemos el histograma para las diferentes variedades 
 
+# Histograma respecto variedad c39
+hist(cabbages$VitC[cabbages$Cult == "c39"],main = "Histograma vitamina C respecto variedad de calabaza c39",xlab = "Vitamina C respecto variedad de calabaza c39")
+# Le añadimos lineas horizontales para que sea más facil su lectura 
+grid(nx = NA, ny = NULL,
+     lty = 2,      # Tipo de ínea
+     col = "gray", # Color
+     lwd = 1)      # Ancho de línea
+hist(cabbages$VitC[cabbages$Cult == "c39"], col = "lightblue", add = TRUE)
+
+# Histograma respecto variedad c52
+hist(cabbages$VitC[cabbages$Cult == "c52"], main = "Histograma vitamina C respecto variedad de calabaza c52",xlab = "Vitamina C respecto variedad de calabaza c52")
+# Le añadimos lineas horizontales para que sea más facil su lectura 
+grid(nx = NA, ny = NULL,
+     lty = 2,      # Tipo de ínea
+     col = "gray", # Color
+     lwd = 1)      # Ancho de línea
+hist(cabbages$VitC[cabbages$Cult == "c52"], col = "darkcyan", add = TRUE)
 
 ```
 
